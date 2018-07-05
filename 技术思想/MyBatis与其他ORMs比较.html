@@ -100,7 +100,7 @@
 <meta property="og:description" content="比较对象关系映射（ORM）框架允许我们从面向对象的语言访问关系数据库。多年来，我已经使用了几个用于Java的Hibernate / JPA，用于JavaScript的Bookshelf.js和Sequelize，仅举几例。我从来没有完全满意这些解决方案，因为这样或那样，他们不符合我的思维方式。最近，我尝试了MyBatis，呼吸新鲜空气！让我解释一下为什么。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ouao27g2f.bkt.clouddn.com/18-2-8/63892798.jpg">
-<meta property="og:updated_time" content="2018-03-01T06:07:26.000Z">
+<meta property="og:updated_time" content="2018-07-05T08:06:41.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MyBatis与其他ORMs比较">
 <meta name="twitter:description" content="比较对象关系映射（ORM）框架允许我们从面向对象的语言访问关系数据库。多年来，我已经使用了几个用于Java的Hibernate / JPA，用于JavaScript的Bookshelf.js和Sequelize，仅举几例。我从来没有完全满意这些解决方案，因为这样或那样，他们不符合我的思维方式。最近，我尝试了MyBatis，呼吸新鲜空气！让我解释一下为什么。">
@@ -341,8 +341,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T11:37:20+08:00">
-                2018-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-05T16:06:41+08:00">
+                2018-07-05
               </time>
             
 
@@ -453,10 +453,10 @@
       
 
       
-        <h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>对象关系映射（<strong>ORM</strong>）框架允许我们从面向对象的语言访问关系数据库。多年来，我已经使用了几个用于Java的<strong>Hibernate / JPA</strong>，用于<strong>JavaScript</strong>的<strong>Bookshelf.js</strong>和<strong>Sequelize</strong>，仅举几例。我从来没有完全满意这些解决方案，因为这样或那样，他们不符合我的思维方式。最近，我尝试了<strong>MyBatis</strong>，呼吸新鲜空气！让我解释一下为什么。<br><a id="more"></a></p>
+        <h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>对象关系映射（<strong>ORM</strong>）框架允许我们从面向对象的语言访问关系数据库。多年来，我已经使用了几个用于Java的<strong>Hibernate / JPA</strong>，用于<strong>JavaScript</strong>的<strong>Bookshelf.js</strong>和<strong>Sequelize</strong>，仅举几例。我从来没有完全满意这些解决方案，因为这样或那样，他们不符合我的思维方式。最近，我尝试了<strong>MyBatis</strong>，呼吸新鲜空气！让我解释一下为什么。<br><img src="http://ouao27g2f.bkt.clouddn.com/18-2-8/63892798.jpg" alt=""></p>
+<a id="more"></a>
 <h2 id="域实体应该没有持久性问题"><a href="#域实体应该没有持久性问题" class="headerlink" title="域实体应该没有持久性问题"></a>域实体应该没有持久性问题</h2><p>如果您遵循领域驱动设计，您可能会认同领域实体应该独立的想法。你不应该拖着一个持久性框架与他们。领域实体形成了六角形体系结构的内核，它只关注业务逻辑。你应该能够以任何你想要的方式站起来这个核心 - 通过构建新的对象或从数据库中检索它们，核心本身不应该在意。许多<strong>ORM</strong>污染这个核心与持久性的担忧，我不喜欢这一点。例如，<strong>Bookshelf</strong>强迫你使用Model对象定义实体，<strong>Sequelize</strong>使用<strong>sequelize.define（）</strong>。这会在实体内创建“隐藏的”属性和方法，教导他们坚持自己。我宁愿拥有专注于业务逻辑的纯Java / JavaScript对象，然后教导持久性框架坚持它们。</p>
 <p>那么，这正是<strong>MyBatis</strong>所做的。实体是<strong>POJO</strong>，对持久性一无所知（参见这里）。相反，你教<strong>MyBatis</strong>如何保存和检索这些实体使用<strong>SQL</strong>语句和结果图（见这里）。对于琐碎的对象，你甚至不需要定义结果地图，<strong>MyBatis</strong>自动计算出来。</p>
-<p><img src="http://ouao27g2f.bkt.clouddn.com/18-2-8/63892798.jpg" alt=""></p>
 <h2 id="让我控制SQL"><a href="#让我控制SQL" class="headerlink" title="让我控制SQL"></a>让我控制SQL</h2><p>对于任何使用关系数据库的严重项目，您无法逃避学习<strong>SQL</strong>。大多数<strong>ORM</strong>试图通过提供更高级别的抽象来使您与<strong>SQL</strong>隔离。但是作为交换，他们强迫你学习一个新的API或一个抽象的查询语言。这些API /查询语言无论如何都会生成<strong>SQL</strong>，所以唯一的区别是你不知道它们是什么，直到你打开引擎盖。在很多情况下，我可以用单个语句编写的查询将以两个或更多语句生成，从而降低性能。现在我突然回到<strong>ORM</strong>并调整它以产生更高效的查询。有时候，<strong>API</strong>不够丰富，无法满足所需要的任何事情，无论如何，我都必须逃避<strong>SQL</strong>语言。为什么要这么麻烦？如果我必须知道<strong>SQL</strong>，为什么不直接自己写，直接优化呢？教学框架将结果映射到对象中要容易得多。</p>
 <p>猜猜看，这正是<strong>MyBatis</strong>所做的 - 在这里看到结果图。它教<strong>MyBatis</strong>如何将查询结果映射到一个<strong>Transaction</strong>对象，并引用一个<strong>Account</strong>和一个<strong>Category</strong>。我最终得到更清晰和可理解的代码。</p>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>我希望你能明白为什么我喜欢<strong>MyBatis</strong>。这将是我未来Java的默认<strong>ORM</strong>。不过，我还没有看到类似的<strong>JavaScript</strong>解决方案。如果有这样的解决方案，你会切换到吗？我很想听听你的想法。</p>
@@ -545,8 +545,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/随记/开篇.html" rel="next" title="开篇">
-                <i class="fa fa-chevron-left"></i> 开篇
+              <a href="/项目地址/项目地址汇总.html" rel="next" title="项目地址汇总">
+                <i class="fa fa-chevron-left"></i> 项目地址汇总
               </a>
             
           </div>
@@ -555,8 +555,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/读书笔记/心智社会读后感.html" rel="prev" title="心智社会读后感">
-                心智社会读后感 <i class="fa fa-chevron-right"></i>
+              <a href="/读书笔记/黑客与画家读后感.html" rel="prev" title="黑客与画家读后感">
+                黑客与画家读后感 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -827,7 +827,7 @@
 <div class="theme-info">
 <i class="fa fa-file-text-o"></i>
   <div class="powered-by"></div>
-  <span class="post-count">全站共18.8k字</span>
+  <span class="post-count">全站共18.9k字</span>
 </div>
 
   

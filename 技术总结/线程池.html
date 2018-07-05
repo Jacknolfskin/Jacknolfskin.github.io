@@ -91,18 +91,21 @@
 
 
 
-<meta name="description" content="线程池线程池概述 什么是线程池 为什么使用线程池 线程池的优势  第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。  第二：提高响应速度。当任务到达时，任务可以不需要的等到线程创建就能立即执行。  第三：提高线程的可管理性。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一的分配，调优和监控。但是要做到合理的利用线程池，必须">
+<meta name="description" content="线程池概述 什么是线程池 为什么使用线程池 线程池的优势">
 <meta name="keywords" content="多线程,并发,线程池">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于线程池">
+<meta property="og:title" content="详解线程池">
 <meta property="og:url" content="https://www.jacknolfskin.top/技术总结/线程池.html">
 <meta property="og:site_name" content="Jacknolfskin">
-<meta property="og:description" content="线程池线程池概述 什么是线程池 为什么使用线程池 线程池的优势  第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。  第二：提高响应速度。当任务到达时，任务可以不需要的等到线程创建就能立即执行。  第三：提高线程的可管理性。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一的分配，调优和监控。但是要做到合理的利用线程池，必须">
+<meta property="og:description" content="线程池概述 什么是线程池 为什么使用线程池 线程池的优势">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T12:32:58.000Z">
+<meta property="og:image" content="http://ouao27g2f.bkt.clouddn.com/18-7-5/3781217.jpg">
+<meta property="og:image" content="http://ouao27g2f.bkt.clouddn.com/18-7-5/64313791.jpg">
+<meta property="og:updated_time" content="2018-07-05T07:46:01.982Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于线程池">
-<meta name="twitter:description" content="线程池线程池概述 什么是线程池 为什么使用线程池 线程池的优势  第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。  第二：提高响应速度。当任务到达时，任务可以不需要的等到线程创建就能立即执行。  第三：提高线程的可管理性。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一的分配，调优和监控。但是要做到合理的利用线程池，必须">
+<meta name="twitter:title" content="详解线程池">
+<meta name="twitter:description" content="线程池概述 什么是线程池 为什么使用线程池 线程池的优势">
+<meta name="twitter:image" content="http://ouao27g2f.bkt.clouddn.com/18-7-5/3781217.jpg">
 
 
 
@@ -138,7 +141,7 @@
 
 
 
-  <title>关于线程池 | Jacknolfskin</title>
+  <title>详解线程池 | Jacknolfskin</title>
   
 
 
@@ -327,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于线程池</h1>
+          <h1 class="post-title" itemprop="name headline">详解线程池</h1>
         
 
         <div class="post-meta">
@@ -339,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T11:37:37+08:00">
-                2018-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-05T15:46:01+08:00">
+                2018-07-05
               </time>
             
 
@@ -389,7 +392,7 @@
 
           
           
-             <span id="/技术总结/线程池.html" class="leancloud_visitors" data-flag-title="关于线程池">
+             <span id="/技术总结/线程池.html" class="leancloud_visitors" data-flag-title="详解线程池">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -414,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,270 字
+                  4,331 字
                 </span>
               
 
@@ -430,7 +433,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  18 分钟
+                  19 分钟
                 </span>
               
             </div>
@@ -451,10 +454,13 @@
       
 
       
-        <h1 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h1><h2 id="线程池概述"><a href="#线程池概述" class="headerlink" title="线程池概述"></a>线程池概述</h2><ul>
+        <h2 id="线程池概述"><a href="#线程池概述" class="headerlink" title="线程池概述"></a>线程池概述</h2><ul>
 <li>什么是线程池</li>
 <li>为什么使用线程池</li>
-<li><p>线程池的优势</p>
+<li>线程池的优势</li>
+</ul>
+<p><img src="http://ouao27g2f.bkt.clouddn.com/18-7-5/3781217.jpg" alt=""></p>
+<a id="more"></a>
 <ul>
 <li><p>第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</p>
 </li>
@@ -463,9 +469,6 @@
 <li><p>第三：提高线程的可管理性。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一的分配，调优和监控。但是要做到合理的利用线程池，必须对其原理了如指掌。</p>
 </li>
 </ul>
-</li>
-</ul>
-<a id="more"></a>
 <h2 id="创建一个线程池并提交线程任务"><a href="#创建一个线程池并提交线程任务" class="headerlink" title="创建一个线程池并提交线程任务"></a>创建一个线程池并提交线程任务</h2><h2 id="线程池源码解析"><a href="#线程池源码解析" class="headerlink" title="线程池源码解析"></a>线程池源码解析</h2><h3 id="参数认识"><a href="#参数认识" class="headerlink" title="参数认识"></a>参数认识</h3><ol>
 <li><p>corePoolSize : 线程池的基本大小，当提交一个任务到线程池时，线程池会创建一个线程来执行任务，即使其他空闲的基本线程能够执行新任务也会创建线程，等到需要执行的任务数大于线程池基本大小时就不再创建。如果调用了线程池的prestartAllCoreThreads方法，线程池会提前创建并启动所有基本线程。</p>
 </li>
@@ -510,6 +513,7 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="comment">// 线程池的控制状态:用来表示线程池的运行状态（整型的高3位）和运行的worker数量（低29位）</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">final</span> AtomicInteger ctl = <span class="keyword">new</span> AtomicInteger(ctlOf(RUNNING, <span class="number">0</span>));</span><br><span class="line"> <span class="comment">// 29位的偏移量</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> COUNT_BITS = Integer.SIZE - <span class="number">3</span>;</span><br><span class="line"> <span class="comment">// 最大容量（2^29 - 1）</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CAPACITY   = (<span class="number">1</span> &lt;&lt; COUNT_BITS) - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// runState is stored in the high-order bits</span></span><br><span class="line"> <span class="comment">// 线程运行状态，总共有5个状态，需要3位来表示（所以偏移量的29 = 32 - 3）</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * RUNNING    :    接受新任务并且处理已经进入阻塞队列的任务</span></span><br><span class="line"><span class="comment"> * SHUTDOWN    ：    不接受新任务，但是处理已经进入阻塞队列的任务</span></span><br><span class="line"><span class="comment"> * STOP        :    不接受新任务，不处理已经进入阻塞队列的任务并且中断正在运行的任务</span></span><br><span class="line"><span class="comment"> * TIDYING    :    所有的任务都已经终止，workerCount为0， 线程转化为TIDYING状态并且调用terminated钩子函数</span></span><br><span class="line"><span class="comment"> * TERMINATED:    terminated钩子函数已经运行完成</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> RUNNING    = -<span class="number">1</span> &lt;&lt; COUNT_BITS;</span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> SHUTDOWN   =  <span class="number">0</span> &lt;&lt; COUNT_BITS;</span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> STOP       =  <span class="number">1</span> &lt;&lt; COUNT_BITS;</span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TIDYING    =  <span class="number">2</span> &lt;&lt; COUNT_BITS;</span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TERMINATED =  <span class="number">3</span> &lt;&lt; COUNT_BITS;</span><br><span class="line"> <span class="comment">// 阻塞队列</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">final</span> BlockingQueue&lt;Runnable&gt; workQueue;</span><br><span class="line"> <span class="comment">// 可重入锁</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">final</span> ReentrantLock mainLock = <span class="keyword">new</span> ReentrantLock();</span><br><span class="line"> <span class="comment">// 存放工作线程集合</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">final</span> HashSet&lt;Worker&gt; workers = <span class="keyword">new</span> HashSet&lt;Worker&gt;();</span><br><span class="line"> <span class="comment">// 终止条件</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">final</span> Condition termination = mainLock.newCondition();</span><br><span class="line"> <span class="comment">// 最大线程池容量</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">int</span> largestPoolSize;</span><br><span class="line"> <span class="comment">// 已完成任务数量</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">long</span> completedTaskCount;</span><br><span class="line"> <span class="comment">// 线程工厂</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">volatile</span> ThreadFactory threadFactory;</span><br><span class="line"> <span class="comment">// 拒绝执行处理器</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">volatile</span> RejectedExecutionHandler handler;</span><br><span class="line"> <span class="comment">// 线程等待运行时间</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">long</span> keepAliveTime;</span><br><span class="line"> <span class="comment">// 是否运行核心线程超时</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">boolean</span> allowCoreThreadTimeOut;</span><br><span class="line"> <span class="comment">// 核心池的大小</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">int</span> corePoolSize;</span><br><span class="line"> <span class="comment">// 最大线程池大小</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">int</span> maximumPoolSize;</span><br><span class="line"> <span class="comment">// 默认拒绝执行处理器</span></span><br><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> RejectedExecutionHandler defaultHandler =</span><br><span class="line">     <span class="keyword">new</span> AbortPolicy();</span><br></pre></td></tr></table></figure>
 <h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ThreadPoolExecutor</span><span class="params">(<span class="keyword">int</span> corePoolSize,</span></span></span><br><span class="line"><span class="function"><span class="params">                          <span class="keyword">int</span> maximumPoolSize,</span></span></span><br><span class="line"><span class="function"><span class="params">                          <span class="keyword">long</span> keepAliveTime,</span></span></span><br><span class="line"><span class="function"><span class="params">                          TimeUnit unit,</span></span></span><br><span class="line"><span class="function"><span class="params">                          BlockingQueue&lt;Runnable&gt; workQueue,</span></span></span><br><span class="line"><span class="function"><span class="params">                          ThreadFactory threadFactory,</span></span></span><br><span class="line"><span class="function"><span class="params">                          RejectedExecutionHandler handler)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (corePoolSize &lt; <span class="number">0</span> ||                                                <span class="comment">// 核心大小不能小于0</span></span><br><span class="line">        maximumPoolSize &lt;= <span class="number">0</span> ||                                            <span class="comment">// 线程池的初始最大容量不能小于0</span></span><br><span class="line">        maximumPoolSize &lt; corePoolSize ||                                <span class="comment">// 初始最大容量不能小于核心大小</span></span><br><span class="line">        keepAliveTime &lt; <span class="number">0</span>)                                                <span class="comment">// keepAliveTime不能小于0</span></span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();                                </span><br><span class="line">    <span class="keyword">if</span> (workQueue == <span class="keyword">null</span> || threadFactory == <span class="keyword">null</span> || handler == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span><br><span class="line">    <span class="comment">// 初始化相应的域</span></span><br><span class="line">    <span class="keyword">this</span>.corePoolSize = corePoolSize;</span><br><span class="line">    <span class="keyword">this</span>.maximumPoolSize = maximumPoolSize;</span><br><span class="line">    <span class="keyword">this</span>.workQueue = workQueue;</span><br><span class="line">    <span class="keyword">this</span>.keepAliveTime = unit.toNanos(keepAliveTime);</span><br><span class="line">    <span class="keyword">this</span>.threadFactory = threadFactory;</span><br><span class="line">    <span class="keyword">this</span>.handler = handler;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>了解了ThreadPoolExecutor的主要结构，再简单梳理一下“一个传入线程池的任务能够被最终正常执行需要经过的主要流程”，方法名称前面没有“XXX.”这种标注的都是ThreadPoolExecutor的方法：<br><img src="http://ouao27g2f.bkt.clouddn.com/18-7-5/64313791.jpg" alt=""></p>
 <h3 id="提交任务"><a href="#提交任务" class="headerlink" title="提交任务"></a>提交任务</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 进行下面三步</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 1. 如果运行的线程小于corePoolSize,则尝试使用用户定义的Runnalbe对象创建一个新的线程</span></span><br><span class="line"><span class="comment">*     调用addWorker函数会原子性的检查runState和workCount，通过返回false来防止在不应</span></span><br><span class="line"><span class="comment">*     该添加线程时添加了线程</span></span><br><span class="line"><span class="comment">* 2. 如果一个任务能够成功入队列，在添加一个线城时仍需要进行双重检查（因为在前一次检查后</span></span><br><span class="line"><span class="comment">*     该线程死亡了），或者当进入到此方法时，线程池已经shutdown了，所以需要再次检查状态，</span></span><br><span class="line"><span class="comment">*    若有必要，当停止时还需要回滚入队列操作，或者当线程池没有线程时需要创建一个新线程</span></span><br><span class="line"><span class="comment">* 3. 如果无法入队列，那么需要增加一个新线程，如果此操作失败，那么就意味着线程池已经shut</span></span><br><span class="line"><span class="comment">*     down或者已经饱和了，所以拒绝任务</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">(Runnable command)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (command == <span class="keyword">null</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span><br><span class="line">    <span class="comment">// 获取线程池控制状态</span></span><br><span class="line">    <span class="keyword">int</span> c = ctl.get();</span><br><span class="line">    <span class="keyword">if</span> (workerCountOf(c) &lt; corePoolSize) &#123; <span class="comment">// worker数量小于corePoolSize</span></span><br><span class="line">        <span class="keyword">if</span> (addWorker(command, <span class="keyword">true</span>)) <span class="comment">// 添加worker</span></span><br><span class="line">            <span class="comment">// 成功则返回</span></span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">// 不成功则再次获取线程池控制状态</span></span><br><span class="line">        c = ctl.get();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 线程池处于RUNNING状态，将用户自定义的Runnable对象添加进workQueue队列</span></span><br><span class="line">    <span class="keyword">if</span> (isRunning(c) &amp;&amp; workQueue.offer(command)) &#123; </span><br><span class="line">        <span class="comment">// 再次检查，获取线程池控制状态</span></span><br><span class="line">        <span class="keyword">int</span> recheck = ctl.get();</span><br><span class="line">        <span class="comment">// 线程池不处于RUNNING状态，将自定义任务从workQueue队列中移除</span></span><br><span class="line">        <span class="keyword">if</span> (! isRunning(recheck) &amp;&amp; remove(command)) </span><br><span class="line">            <span class="comment">// 拒绝执行命令</span></span><br><span class="line">            reject(command);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (workerCountOf(recheck) == <span class="number">0</span>) <span class="comment">// worker数量等于0</span></span><br><span class="line">            <span class="comment">// 添加worker</span></span><br><span class="line">            addWorker(<span class="keyword">null</span>, <span class="keyword">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (!addWorker(command, <span class="keyword">false</span>)) <span class="comment">// 添加worker失败</span></span><br><span class="line">        <span class="comment">// 拒绝执行命令</span></span><br><span class="line">        reject(command);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="addWorker"><a href="#addWorker" class="headerlink" title="addWorker"></a>addWorker</h4><ol>
 <li><p>原子性的增加workerCount。</p>
@@ -596,7 +600,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.jacknolfskin.top/技术总结/线程池.html" title="关于线程池">https://www.jacknolfskin.top/技术总结/线程池.html</a>
+    <a href="https://www.jacknolfskin.top/技术总结/线程池.html" title="详解线程池">https://www.jacknolfskin.top/技术总结/线程池.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -637,6 +641,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/项目地址/项目地址汇总.html" rel="prev" title="项目地址汇总">
+                项目地址汇总 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -839,7 +847,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程池"><span class="nav-number">1.</span> <span class="nav-text">线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池概述"><span class="nav-number">1.1.</span> <span class="nav-text">线程池概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个线程池并提交线程任务"><span class="nav-number">1.2.</span> <span class="nav-text">创建一个线程池并提交线程任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池源码解析"><span class="nav-number">1.3.</span> <span class="nav-text">线程池源码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数认识"><span class="nav-number">1.3.1.</span> <span class="nav-text">参数认识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">1.3.2.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交任务"><span class="nav-number">1.3.3.</span> <span class="nav-text">提交任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#addWorker"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">addWorker</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行任务"><span class="nav-number">1.3.4.</span> <span class="nav-text">执行任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭线程池"><span class="nav-number">1.3.5.</span> <span class="nav-text">关闭线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考："><span class="nav-number">1.3.5.1.</span> <span class="nav-text">参考：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池概述"><span class="nav-number">1.</span> <span class="nav-text">线程池概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个线程池并提交线程任务"><span class="nav-number">2.</span> <span class="nav-text">创建一个线程池并提交线程任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池源码解析"><span class="nav-number">3.</span> <span class="nav-text">线程池源码解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数认识"><span class="nav-number">3.1.</span> <span class="nav-text">参数认识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">3.2.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交任务"><span class="nav-number">3.3.</span> <span class="nav-text">提交任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#addWorker"><span class="nav-number">3.3.1.</span> <span class="nav-text">addWorker</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行任务"><span class="nav-number">3.4.</span> <span class="nav-text">执行任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭线程池"><span class="nav-number">3.5.</span> <span class="nav-text">关闭线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考："><span class="nav-number">3.5.1.</span> <span class="nav-text">参考：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -906,7 +914,7 @@
 <div class="theme-info">
 <i class="fa fa-file-text-o"></i>
   <div class="powered-by"></div>
-  <span class="post-count">全站共18.8k字</span>
+  <span class="post-count">全站共18.9k字</span>
 </div>
 
   
