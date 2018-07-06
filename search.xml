@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用 Hexo + NexT 搭建静态博客]]></title>
+    <url>%2F%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE%2F%E4%BD%BF%E7%94%A8Hexo%2BNextT%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html</url>
+    <content type="text"><![CDATA[前言Github 为广大开发者提供了一个非常好的平台，不仅是代码的开源，同时 Github 还提供了开发者可以在 Github 上建立自己的站点（GithubPage）的一个非常有意思的功能。这个功能的局限是只能创建静态的网站，那么我们可以使用一些工具来快速创建这一网站。本文旨在帮助刚接触 Github 新手，想利用 Github 来创建自己的站点、个人博客等。大神可以忽视(:з」∠)。 准备你需要在 Github 上创建一个属于自己的账户，然后新建一个仓库（new repository），并命名为 YourSiteName.github.io/com，此时 Github 会帮助你初始化一个静态网页，你可以根据自己的喜好选择一些模版（这都不是重点），接着尝试访问下你所建的站点，成功后就可以开始动工了。 关于Hexo A fast, simple &amp; powerful blog framework快速，简单而高效的静态博客框架 关于NexT NexT is built for easily use with elegant appearance. First things first, always keep things simpleNexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。 这是一个扩展主题，由 iissnan 开发，精于心，简于形的理念。 参考: Deployment]]></content>
+      <categories>
+        <category>网站搭建</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+        <tag>博客建设</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[心智社会读后感]]></title>
     <url>%2F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%2F%E5%BF%83%E6%99%BA%E7%A4%BE%E4%BC%9A%E8%AF%BB%E5%90%8E%E6%84%9F.html</url>
     <content type="text"><![CDATA[《心智社会》读书感马文·明斯基 – 美国国家科学院的成员，美国人工智能学会的前任主席 NO.1目前这本书我只看了20多页，用通俗易懂的语言和生动的例子去阐述人类思维和意识，帮助人们去认识人类智慧的如何产生，进而去帮助人们去研究机器学习和创造人工智能。 作者认为大脑不过是肉做的机器”，大脑中不具备思维的微小单元可以组成各种思维——意识、精神活动、常识、思维、智能、自我，最终形成“统一的智慧”,这种智能组合就是“心智社会”。 但我认为的这些微小单元共同组成了智能体，也就是生物。人属于一种高级生物，智慧或者说意识的存在让我们这些高级智能体共同组成了一个庞大的心智社会。 也就说人与其他生物或者说和机器最大的不同便是意识了，书中有个很有趣的例子，为什么人类下雨不想被淋湿，却愿意在卫生间沐浴”这种3岁小孩都知道的问题，计算机就会感到费解，这也就恰好说明意识的重要性了。 NO.2个体之间的相似之处源自思维的本质，而构成思维的那些关系复杂且外表、形式、种类各不相同的物质原子全部都是微不足道的 物理学家用几条定律就解释了全世界甚至全宇宙，但对人类的思维来说行不通。事实上直到今天，人类依然无法理解自己大脑是如何运作的，，因为人类大脑是由几百种不同的脑细胞协作的，即使理解了单种细胞的功能也很难理解几百种细胞之间如何协同运作。 人类是机器吗？或者说机器可以像人类一样吗？人类的一个简单动作就需要机器成千上万的程序协同运作且高度自动化，但只限于现在，随着科技的快速发展，未来的机器实现这套动作可能简单的多。那有的人可能会说“太可笑了，我倒不觉得自己像个机器”，但书中说如果你不是一台机器，你又怎么会知道身为一台机器是什么感觉呢？那有的人可能又会说，我会思考，但我想说的就像你会开车，但你并不知道发动机是如何运作的，会使用某种工具不代表你熟悉它的工作原理，连你自己的都没有弄清楚，又怎么敢保证自己不是机器呢？ 开个玩笑，人人都知道机器只能以无生命的机械方式行动，但我们无法预知机器的未来是什么样子，就像假如火星人十亿年前到访地球看到由一些细胞组成的简单团块，可能火星人也没想到会有现在的人类文明吧，机器也是同样的道理。 也许人类只是机器进化到的一个新高度，人工智能是有史以来能最大限度增强人类能力的东西，人类也并不是进化的终点。 NO.3何为自我？ 任何人或物的身份、特征、或基本品质 一个特定的人的身份、人格、个体性等；一个人对自己区别于他人的称呼–《韦氏词典》 人们总喜欢去研究他人或者事物，却很少认真的去研究自己，事实上，关于“自我”的理念中，包含着我们是什么的概念，这些信念又包含着我们能做什么和我们可能倾向于做什么。 此外，有时候我们认为自我是单一的、自相一致的实体，有时我们又认为自我是分散的。比如我们会说我感觉，我认为，我想要等。但有些人可能会出现一部分我想要这样，一部分我想要那样。]]></content>
@@ -152,18 +164,6 @@
       <tags>
         <tag>技术总结</tag>
         <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[使用 Hexo + NexT 搭建静态博客]]></title>
-    <url>%2F%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE%2F%E4%BD%BF%E7%94%A8Hexo%2BNextT%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html</url>
-    <content type="text"><![CDATA[前言Github 为广大开发者提供了一个非常好的平台，不仅是代码的开源，同时 Github 还提供了开发者可以在 Github 上建立自己的站点（GithubPage）的一个非常有意思的功能。这个功能的局限是只能创建静态的网站，那么我们可以使用一些工具来快速创建这一网站。本文旨在帮助刚接触 Github 新手，想利用 Github 来创建自己的站点、个人博客等。大神可以忽视(:з」∠)。 准备你需要在 Github 上创建一个属于自己的账户，然后新建一个仓库（new repository），并命名为 YourSiteName.github.io/com，此时 Github 会帮助你初始化一个静态网页，你可以根据自己的喜好选择一些模版（这都不是重点），接着尝试访问下你所建的站点，成功后就可以开始动工了。 关于Hexo A fast, simple &amp; powerful blog framework快速，简单而高效的静态博客框架 关于NexT NexT is built for easily use with elegant appearance. First things first, always keep things simpleNexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。 这是一个扩展主题，由 iissnan 开发，精于心，简于形的理念。 正题上面是对搭建博客的一些技术了解，接下来进入正题。 Hexo 初始化博客框架1.安装HexoHexo 安装和搭建依赖 Nodejs 和 Git ，可自行下载。 1$ npm install -g hexo-cli 具体的教程的网上已经很多了，而且官网也写的比较详细，坑较少，在此就不详细介绍了 2018.1.01博客域名更新为www.codeteen.cn 2018.1.06更新简单SEO,目前已提交百度及Google,Google已大部分收录，百度稍慢 2018.1.12更新博客已在Github和Coding分别部署，国内用户访问至Coding,境外用户访问至Github以提升访问速度 2018.1.18更新个人博客已通过Https认证，Https访问Jacknolfskin 2018.2.20更新本站全部博文链接已被百度和谷歌收录 2018.5.25博客域名更新为www.jacknolfskin.top 参考: Deployment]]></content>
-      <categories>
-        <category>网站搭建</category>
-      </categories>
-      <tags>
-        <tag>运维</tag>
-        <tag>博客建设</tag>
       </tags>
   </entry>
   <entry>

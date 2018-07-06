@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Jacknolfskin">
 <meta property="og:description" content="前言Github 为广大开发者提供了一个非常好的平台，不仅是代码的开源，同时 Github 还提供了开发者可以在 Github 上建立自己的站点（GithubPage）的一个非常有意思的功能。这个功能的局限是只能创建静态的网站，那么我们可以使用一些工具来快速创建这一网站。本文旨在帮助刚接触 Github 新手，想利用 Github 来创建自己的站点、个人博客等。大神可以忽视(:з」∠)。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-29T01:05:33.000Z">
+<meta property="og:updated_time" content="2018-07-06T03:37:34.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Hexo + NexT 搭建静态博客">
 <meta name="twitter:description" content="前言Github 为广大开发者提供了一个非常好的平台，不仅是代码的开源，同时 Github 还提供了开发者可以在 Github 上建立自己的站点（GithubPage）的一个非常有意思的功能。这个功能的局限是只能创建静态的网站，那么我们可以使用一些工具来快速创建这一网站。本文旨在帮助刚接触 Github 新手，想利用 Github 来创建自己的站点、个人博客等。大神可以忽视(:з」∠)。">
@@ -241,6 +241,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-clock-o"></i> <br />
+            
+            时间线
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
@@ -346,8 +356,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T11:22:50+08:00">
-                2018-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-06T11:37:34+08:00">
+                2018-07-06
               </time>
             
 
@@ -362,8 +372,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-29T09:05:33+08:00">
-                2018-05-29
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-06T11:37:34+08:00">
+                2018-07-06
               </time>
             
           </span>
@@ -433,7 +443,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  557 字
+                  331 字
                 </span>
               
 
@@ -449,7 +459,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  1 分钟
                 </span>
               
             </div>
@@ -479,16 +489,6 @@
 <p>NexT is built for easily use with elegant appearance. First things first, always keep things simple<br>NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。</p>
 </blockquote>
 <p>这是一个扩展主题，由 iissnan 开发，精于心，简于形的理念。</p>
-<h2 id="正题"><a href="#正题" class="headerlink" title="正题"></a>正题</h2><p>上面是对搭建博客的一些技术了解，接下来进入正题。</p>
-<h3 id="Hexo-初始化博客框架"><a href="#Hexo-初始化博客框架" class="headerlink" title="Hexo 初始化博客框架"></a>Hexo 初始化博客框架</h3><p>1.安装Hexo<br>Hexo 安装和搭建依赖 Nodejs 和 Git ，可自行下载。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>具体的教程的网上已经很多了，而且官网也写的比较详细，坑较少，在此就不详细介绍了</p>
-<h5 id="2018-1-01"><a href="#2018-1-01" class="headerlink" title="2018.1.01"></a>2018.1.01</h5><p>博客域名更新为<strong>www.codeteen.cn</strong></p>
-<h5 id="2018-1-06更新"><a href="#2018-1-06更新" class="headerlink" title="2018.1.06更新"></a>2018.1.06更新</h5><p>简单<strong>SEO</strong>,目前已提交百度及Google,Google已大部分收录，百度稍慢</p>
-<h5 id="2018-1-12更新"><a href="#2018-1-12更新" class="headerlink" title="2018.1.12更新"></a>2018.1.12更新</h5><p>博客已在<strong>Github</strong>和<strong>Coding</strong>分别部署，国内用户访问至<strong>Coding</strong>,境外用户访问至<strong>Github</strong>以提升访问速度</p>
-<h5 id="2018-1-18更新"><a href="#2018-1-18更新" class="headerlink" title="2018.1.18更新"></a>2018.1.18更新</h5><p>个人博客已通过<strong>Https</strong>认证，Https访问<a href="https://www.jacknolfskin.top/">Jacknolfskin</a></p>
-<h5 id="2018-2-20更新"><a href="#2018-2-20更新" class="headerlink" title="2018.2.20更新"></a>2018.2.20更新</h5><p>本站全部博文链接已被百度和谷歌收录</p>
-<h5 id="2018-5-25"><a href="#2018-5-25" class="headerlink" title="2018.5.25"></a>2018.5.25</h5><p>博客域名更新为<strong>www.jacknolfskin.top</strong></p>
 <p>参考: <a href="http://joveyzheng.com/2015/09/18/use-hexo-and-next-to-build-blog/" target="_blank" rel="noopener">Deployment</a></p>
 
       
@@ -574,8 +574,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/技术总结/并发编程之ThreadLocal、Volatile、synchronized、Atomic关键字.html" rel="next" title="并发编程之ThreadLocal、Volatile、Synchronized、Atomic关键字">
-                <i class="fa fa-chevron-left"></i> 并发编程之ThreadLocal、Volatile、Synchronized、Atomic关键字
+              <a href="/读书笔记/心智社会读后感.html" rel="next" title="心智社会读后感">
+                <i class="fa fa-chevron-left"></i> 心智社会读后感
               </a>
             
           </div>
@@ -583,10 +583,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/技术总结/Nginx配置详解.html" rel="prev" title="Nginx配置详解">
-                Nginx配置详解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -789,7 +785,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Hexo"><span class="nav-number">3.</span> <span class="nav-text">关于Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于NexT"><span class="nav-number">4.</span> <span class="nav-text">关于NexT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正题"><span class="nav-number">5.</span> <span class="nav-text">正题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-初始化博客框架"><span class="nav-number">5.1.</span> <span class="nav-text">Hexo 初始化博客框架</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2018-1-01"><span class="nav-number">5.1.0.1.</span> <span class="nav-text">2018.1.01</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2018-1-06更新"><span class="nav-number">5.1.0.2.</span> <span class="nav-text">2018.1.06更新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2018-1-12更新"><span class="nav-number">5.1.0.3.</span> <span class="nav-text">2018.1.12更新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2018-1-18更新"><span class="nav-number">5.1.0.4.</span> <span class="nav-text">2018.1.18更新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2018-2-20更新"><span class="nav-number">5.1.0.5.</span> <span class="nav-text">2018.2.20更新</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2018-5-25"><span class="nav-number">5.1.0.6.</span> <span class="nav-text">2018.5.25</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Hexo"><span class="nav-number">3.</span> <span class="nav-text">关于Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于NexT"><span class="nav-number">4.</span> <span class="nav-text">关于NexT</span></a></li></ol></div>
             
 
           </div>
@@ -856,7 +852,7 @@
 <div class="theme-info">
 <i class="fa fa-file-text-o"></i>
   <div class="powered-by"></div>
-  <span class="post-count">全站共18.9k字</span>
+  <span class="post-count">全站共18.6k字</span>
 </div>
 
   

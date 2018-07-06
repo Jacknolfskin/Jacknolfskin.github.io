@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jacknolfskin.top/"/>
-  <updated>2018-07-05T09:01:06.259Z</updated>
+  <updated>2018-07-06T03:37:34.341Z</updated>
   <id>https://www.jacknolfskin.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Hexo + NexT 搭建静态博客</title>
+    <link href="https://www.jacknolfskin.top/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE/%E4%BD%BF%E7%94%A8Hexo+NextT%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html"/>
+    <id>https://www.jacknolfskin.top/博客建设/使用Hexo+NextT搭建博客.html</id>
+    <published>2018-07-06T03:37:34.334Z</published>
+    <updated>2018-07-06T03:37:34.341Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Github 为广大开发者提供了一个非常好的平台，不仅是代码的开源，同时 Github 还提供了开发者可以在 Github 上建立自己的站点（GithubPage）的一个非常有意思的功能。这个功能的局限是只能创建静态的网站，那么我们可以使用一些工具来快速创建这一网站。<br>本文旨在帮助刚接触 Github 新手，想利用 Github 来创建自己的站点、个人博客等。大神可以忽视(:з」∠)。<br><a id="more"></a></p><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>你需要在 Github 上创建一个属于自己的账户，然后新建一个仓库（new repository），并命名为 YourSiteName.github.io/com，此时 Github 会帮助你初始化一个静态网页，你可以根据自己的喜好选择一些模版（这都不是重点），接着尝试访问下你所建的站点，成功后就可以开始动工了。</p><h2 id="关于Hexo"><a href="#关于Hexo" class="headerlink" title="关于Hexo"></a>关于Hexo</h2><blockquote><p>A fast, simple &amp; powerful blog framework<br>快速，简单而高效的静态博客框架</p></blockquote><h2 id="关于NexT"><a href="#关于NexT" class="headerlink" title="关于NexT"></a>关于NexT</h2><blockquote><p>NexT is built for easily use with elegant appearance. First things first, always keep things simple<br>NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。</p></blockquote><p>这是一个扩展主题，由 iissnan 开发，精于心，简于形的理念。</p><p>参考: <a href="http://joveyzheng.com/2015/09/18/use-hexo-and-next-to-build-blog/" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Github 为广大开发者提供了一个非常好的平台，不仅是代码的开源，同时 Github 还提供了开发者可以在 Github 上建立自己的站点（GithubPage）的一个非常有意思的功能。这个功能的局限是只能创建静态的网站，那么我们可以使用一些工具来快速创建这一网站。&lt;br&gt;本文旨在帮助刚接触 Github 新手，想利用 Github 来创建自己的站点、个人博客等。大神可以忽视(:з」∠)。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="网站搭建" scheme="https://www.jacknolfskin.top/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="运维" scheme="https://www.jacknolfskin.top/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="博客建设" scheme="https://www.jacknolfskin.top/tags/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>心智社会读后感</title>
@@ -350,30 +374,6 @@
       <category term="技术总结" scheme="https://www.jacknolfskin.top/tags/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/"/>
     
       <category term="Nginx" scheme="https://www.jacknolfskin.top/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Hexo + NexT 搭建静态博客</title>
-    <link href="https://www.jacknolfskin.top/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE/%E4%BD%BF%E7%94%A8Hexo+NextT%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html"/>
-    <id>https://www.jacknolfskin.top/博客建设/使用Hexo+NextT搭建博客.html</id>
-    <published>2018-06-13T03:22:50.453Z</published>
-    <updated>2018-05-29T01:05:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Github 为广大开发者提供了一个非常好的平台，不仅是代码的开源，同时 Github 还提供了开发者可以在 Github 上建立自己的站点（GithubPage）的一个非常有意思的功能。这个功能的局限是只能创建静态的网站，那么我们可以使用一些工具来快速创建这一网站。<br>本文旨在帮助刚接触 Github 新手，想利用 Github 来创建自己的站点、个人博客等。大神可以忽视(:з」∠)。<br><a id="more"></a></p><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>你需要在 Github 上创建一个属于自己的账户，然后新建一个仓库（new repository），并命名为 YourSiteName.github.io/com，此时 Github 会帮助你初始化一个静态网页，你可以根据自己的喜好选择一些模版（这都不是重点），接着尝试访问下你所建的站点，成功后就可以开始动工了。</p><h2 id="关于Hexo"><a href="#关于Hexo" class="headerlink" title="关于Hexo"></a>关于Hexo</h2><blockquote><p>A fast, simple &amp; powerful blog framework<br>快速，简单而高效的静态博客框架</p></blockquote><h2 id="关于NexT"><a href="#关于NexT" class="headerlink" title="关于NexT"></a>关于NexT</h2><blockquote><p>NexT is built for easily use with elegant appearance. First things first, always keep things simple<br>NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。</p></blockquote><p>这是一个扩展主题，由 iissnan 开发，精于心，简于形的理念。</p><h2 id="正题"><a href="#正题" class="headerlink" title="正题"></a>正题</h2><p>上面是对搭建博客的一些技术了解，接下来进入正题。</p><h3 id="Hexo-初始化博客框架"><a href="#Hexo-初始化博客框架" class="headerlink" title="Hexo 初始化博客框架"></a>Hexo 初始化博客框架</h3><p>1.安装Hexo<br>Hexo 安装和搭建依赖 Nodejs 和 Git ，可自行下载。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>具体的教程的网上已经很多了，而且官网也写的比较详细，坑较少，在此就不详细介绍了</p><h5 id="2018-1-01"><a href="#2018-1-01" class="headerlink" title="2018.1.01"></a>2018.1.01</h5><p>博客域名更新为<strong>www.codeteen.cn</strong></p><h5 id="2018-1-06更新"><a href="#2018-1-06更新" class="headerlink" title="2018.1.06更新"></a>2018.1.06更新</h5><p>简单<strong>SEO</strong>,目前已提交百度及Google,Google已大部分收录，百度稍慢</p><h5 id="2018-1-12更新"><a href="#2018-1-12更新" class="headerlink" title="2018.1.12更新"></a>2018.1.12更新</h5><p>博客已在<strong>Github</strong>和<strong>Coding</strong>分别部署，国内用户访问至<strong>Coding</strong>,境外用户访问至<strong>Github</strong>以提升访问速度</p><h5 id="2018-1-18更新"><a href="#2018-1-18更新" class="headerlink" title="2018.1.18更新"></a>2018.1.18更新</h5><p>个人博客已通过<strong>Https</strong>认证，Https访问<a href="https://www.jacknolfskin.top/">Jacknolfskin</a></p><h5 id="2018-2-20更新"><a href="#2018-2-20更新" class="headerlink" title="2018.2.20更新"></a>2018.2.20更新</h5><p>本站全部博文链接已被百度和谷歌收录</p><h5 id="2018-5-25"><a href="#2018-5-25" class="headerlink" title="2018.5.25"></a>2018.5.25</h5><p>博客域名更新为<strong>www.jacknolfskin.top</strong></p><p>参考: <a href="http://joveyzheng.com/2015/09/18/use-hexo-and-next-to-build-blog/" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Github 为广大开发者提供了一个非常好的平台，不仅是代码的开源，同时 Github 还提供了开发者可以在 Github 上建立自己的站点（GithubPage）的一个非常有意思的功能。这个功能的局限是只能创建静态的网站，那么我们可以使用一些工具来快速创建这一网站。&lt;br&gt;本文旨在帮助刚接触 Github 新手，想利用 Github 来创建自己的站点、个人博客等。大神可以忽视(:з」∠)。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="网站搭建" scheme="https://www.jacknolfskin.top/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
-    
-    
-      <category term="运维" scheme="https://www.jacknolfskin.top/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-      <category term="博客建设" scheme="https://www.jacknolfskin.top/tags/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E8%AE%BE/"/>
     
   </entry>
   
