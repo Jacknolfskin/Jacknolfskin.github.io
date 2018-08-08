@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="多线程,守护线程,并发," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -98,18 +98,17 @@
 
 
 
-<meta name="description" content="守护线程Demo1234567891011121314151617public class DaemonThreadDemo &amp;#123;    public static void main(String[] args) throws InterruptedException &amp;#123;        Thread mainThread = new Thread(new Runnable()">
-<meta name="keywords" content="多线程,守护线程,并发">
+<meta name="description" content="title: 关于守护线程categories: 多线程与并发tags:  多线程 守护线程 并发   守护线程Demo在Java中有两种线程：一种是普通线程，另一种是守护线程 守护线程：顾名思义就是守护的线程，它是为非守护线程服务的线程。 JVM虚拟机正常退出的时机就是系统中不存在非守护线程的时候，也就是说系统中不存在普通线程时虚拟机退出而不管守护线程是否还在运行 生活场景举例：普通线程相当于">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于守护线程">
+<meta property="og:title" content="Jacknolfskin">
 <meta property="og:url" content="https://www.jacknolfskin.top/技术总结/守护线程.html">
 <meta property="og:site_name" content="Jacknolfskin">
-<meta property="og:description" content="守护线程Demo1234567891011121314151617public class DaemonThreadDemo &amp;#123;    public static void main(String[] args) throws InterruptedException &amp;#123;        Thread mainThread = new Thread(new Runnable()">
+<meta property="og:description" content="title: 关于守护线程categories: 多线程与并发tags:  多线程 守护线程 并发   守护线程Demo在Java中有两种线程：一种是普通线程，另一种是守护线程 守护线程：顾名思义就是守护的线程，它是为非守护线程服务的线程。 JVM虚拟机正常退出的时机就是系统中不存在非守护线程的时候，也就是说系统中不存在普通线程时虚拟机退出而不管守护线程是否还在运行 生活场景举例：普通线程相当于">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-07T10:40:52.000Z">
+<meta property="og:updated_time" content="2018-08-08T13:24:20.847Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于守护线程">
-<meta name="twitter:description" content="守护线程Demo1234567891011121314151617public class DaemonThreadDemo &amp;#123;    public static void main(String[] args) throws InterruptedException &amp;#123;        Thread mainThread = new Thread(new Runnable()">
+<meta name="twitter:title" content="Jacknolfskin">
+<meta name="twitter:description" content="title: 关于守护线程categories: 多线程与并发tags:  多线程 守护线程 并发   守护线程Demo在Java中有两种线程：一种是普通线程，另一种是守护线程 守护线程：顾名思义就是守护的线程，它是为非守护线程服务的线程。 JVM虚拟机正常退出的时机就是系统中不存在非守护线程的时候，也就是说系统中不存在普通线程时虚拟机退出而不管守护线程是否还在运行 生活场景举例：普通线程相当于">
 
 
 
@@ -145,7 +144,7 @@
 
 
 
-  <title>关于守护线程 | Jacknolfskin</title>
+  <title> | Jacknolfskin</title>
   
 
 
@@ -164,6 +163,11 @@
     
   
 
+  <!-- <div class="bg_content">
+    <div class="filter"></div>
+    <canvas id="canvas"></canvas>
+  </div> -->
+
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/Jacknolfskin"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
@@ -181,7 +185,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">寄蜉蝣于天地，渺沧海之一栗</p>
       
   </div>
 
@@ -344,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于守护线程</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -356,8 +360,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T11:30:18+08:00">
-                2018-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T14:17:31+08:00">
+                2018-07-01
               </time>
             
 
@@ -372,34 +376,12 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-07T18:40:52+08:00">
-                2018-06-07
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-08T21:24:20+08:00">
+                2018-08-08
               </time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/多线程与并发/" itemprop="url" rel="index">
-                    <span itemprop="name">多线程与并发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -418,7 +400,7 @@
 
           
           
-             <span id="/技术总结/守护线程.html" class="leancloud_visitors" data-flag-title="关于守护线程">
+             <span id="/技术总结/守护线程.html" class="leancloud_visitors" data-flag-title="">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -443,7 +425,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  121 字
+                  553 字
                 </span>
               
 
@@ -459,7 +441,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -480,9 +462,53 @@
       
 
       
-        <h4 id="守护线程Demo"><a href="#守护线程Demo" class="headerlink" title="守护线程Demo"></a>守护线程Demo</h4><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">DaemonThreadDemo</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params">String[] args</span>) throws InterruptedException </span>&#123;</span><br><span class="line">        Thread mainThread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                Thread childThread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ClildThread());</span><br><span class="line">                childThread.setDaemon(<span class="literal">true</span>);</span><br><span class="line">                childThread.start();</span><br><span class="line">                System.<span class="keyword">out</span>.println(<span class="string">"I’m main thread…"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        mainThread.start();</span><br><span class="line">        Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">        System.<span class="keyword">out</span>.println(Thread.currentThread().getName() + <span class="string">"主线程结束"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClildThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"I’m child thread.."</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                TimeUnit.MILLISECONDS.sleep(<span class="number">100</span>);</span><br><span class="line">                <span class="comment">//Thread.sleep(100);</span></span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <hr>
+<p>title: 关于守护线程<br>categories: 多线程与并发<br>tags:</p>
+<ul>
+<li>多线程</li>
+<li>守护线程</li>
+<li>并发</li>
+</ul>
+<hr>
+<h4 id="守护线程Demo"><a href="#守护线程Demo" class="headerlink" title="守护线程Demo"></a>守护线程Demo</h4><p>在Java中有两种线程：一种是普通线程，另一种是守护线程</p>
+<p><strong>守护线程：</strong>顾名思义就是守护的线程，它是为非守护线程服务的线程。</p>
+<p>JVM虚拟机正常退出的时机就是系统中不存在非守护线程的时候，也就是说系统中不存在普通线程时虚拟机退出而不管守护线程是否还在运行</p>
+<p><strong>生活场景举例：</strong>普通线程相当于是主人，守护线程就是保姆，保姆是为了主人服务的。当主人都挂了，那么保姆可以存在也可以不存在</p>
+<p><strong>来一道面试题：</strong>一个主线程，三个子线程，9个守护线程，他们停止的顺序时什么？<br>答：我们理解了上面讲的虚拟机退出时机再结合生活场景的例子，很容易就能搞明白这个问题！主线程相当于家庭、子线程相当于主人、守护线程相当于保姆或者是奴才，那么当我们的主人挂了，保姆可能还要继续打扫房子，但是房子也坏了消失了，那么保姆或奴才也就没必要存在了。所以说守护线程是最后才会停止的。那么主线程和子线程是谁先停止呢？这个其实很简单，我们想想，在一个main方法中启动一个线程打印一条语句，那么只有当这个线程停止之后，控制台的那个红色框才会置灰，也就是说main线程才会死亡。那么这个问题的答案就是：子、主、守护</p>
+<p><strong>手动敲个主线程和守护线程代码:</strong></p>
+<pre><code>public class DaemonThreadDemo {
+    public static void main(String[] args) throws InterruptedException {
+        Thread mainThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Thread childThread = new Thread(new ClildThread());
+                childThread.setDaemon(true);
+                childThread.start();
+                System.out.println(&quot;I’m main thread…&quot;);
+            }
+        });
+        mainThread.start();
+        Thread.sleep(1000);
+        System.out.println(Thread.currentThread().getName() + &quot;主线程结束&quot;);
+
+    }
+}
+</code></pre><a id="more"></a>
+<pre><code>class ClildThread implements Runnable {
+    @Override
+    public void run() {
+        while (true) {
+            System.out.println(&quot;I’m child thread..&quot;);
+            try {
+                TimeUnit.MILLISECONDS.sleep(100);
+                //Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+</code></pre>
       
     </div>
     
@@ -536,7 +562,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.jacknolfskin.top/技术总结/守护线程.html" title="关于守护线程">https://www.jacknolfskin.top/技术总结/守护线程.html</a>
+    <a href="https://www.jacknolfskin.top/技术总结/守护线程.html" title="">https://www.jacknolfskin.top/技术总结/守护线程.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -548,16 +574,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/多线程/" rel="tag"><i class="fa fa-tag"></i> 多线程</a>
-          
-            <a href="/tags/守护线程/" rel="tag"><i class="fa fa-tag"></i> 守护线程</a>
-          
-            <a href="/tags/并发/" rel="tag"><i class="fa fa-tag"></i> 并发</a>
-          
-        </div>
       
 
       
@@ -681,7 +697,7 @@
                 alt="Jack Hu" />
             
               <p class="site-author-name" itemprop="name">Jack Hu</p>
-              <p class="site-description motion-element" itemprop="description">不以物喜，不以己悲</p>
+              <p class="site-description motion-element" itemprop="description">寄蜉蝣于天地，渺沧海之一栗</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -691,7 +707,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -702,7 +718,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -713,7 +729,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -850,7 +866,7 @@
 <div class="theme-info">
 <i class="fa fa-file-text-o"></i>
   <div class="powered-by"></div>
-  <span class="post-count">全站共18.6k字</span>
+  <span class="post-count">全站共19.6k字</span>
 </div>
 
   
@@ -1531,5 +1547,8 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":75,"height":150},"mobile":{"show":true}});</script></body>
+
+  <script type="text/javascript" src="/js/src/canvasline.js"></script>
+
+</body>
 </html>

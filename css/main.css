@@ -2051,7 +2051,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ee508c;
+  background: #5912ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2836,7 +2836,6 @@ img:hover {
 }
 .page-post-detail .comments {
   overflow: hidden;
-  background: #FFF;
 }
 @media (max-width: 767px) {
   .header-inner,
@@ -2994,4 +2993,31 @@ body {
     top: 10px;
     right: 10px;
   }
+}
+#canvas {
+  width: 100%;
+  height: 100%;
+}
+.bg_content {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  cursor: none;
+  background: #fff;
+}
+.filter {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fe5757;
+  animation: colorChange 30s ease-in-out infinite;
+  animation-fill-mode: both;
+  mix-blend-mode: overlay;
+  z-index: -1;
 }
