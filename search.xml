@@ -131,9 +131,17 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title><![CDATA[守护线程]]></title>
     <url>%2F%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93%2F%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B.html</url>
-    <content type="text"><![CDATA[title: 关于守护线程categories: 多线程与并发tags: 多线程 守护线程 并发 守护线程Demo在Java中有两种线程：一种是普通线程，另一种是守护线程 守护线程：顾名思义就是守护的线程，它是为非守护线程服务的线程。 JVM虚拟机正常退出的时机就是系统中不存在非守护线程的时候，也就是说系统中不存在普通线程时虚拟机退出而不管守护线程是否还在运行 生活场景举例：普通线程相当于是主人，守护线程就是保姆，保姆是为了主人服务的。当主人都挂了，那么保姆可以存在也可以不存在 来一道面试题：一个主线程，三个子线程，9个守护线程，他们停止的顺序时什么？答：我们理解了上面讲的虚拟机退出时机再结合生活场景的例子，很容易就能搞明白这个问题！主线程相当于家庭、子线程相当于主人、守护线程相当于保姆或者是奴才，那么当我们的主人挂了，保姆可能还要继续打扫房子，但是房子也坏了消失了，那么保姆或奴才也就没必要存在了。所以说守护线程是最后才会停止的。那么主线程和子线程是谁先停止呢？这个其实很简单，我们想想，在一个main方法中启动一个线程打印一条语句，那么只有当这个线程停止之后，控制台的那个红色框才会置灰，也就是说main线程才会死亡。那么这个问题的答案就是：子、主、守护 手动敲个主线程和守护线程代码: public class DaemonThreadDemo { public static void main(String[] args) throws InterruptedException { Thread mainThread = new Thread(new Runnable() { @Override public void run() { Thread childThread = new Thread(new ClildThread()); childThread.setDaemon(true); childThread.start(); System.out.println(&quot;I’m main thread…&quot;); } }); mainThread.start(); Thread.sleep(1000); System.out.println(Thread.currentThread().getName() + &quot;主线程结束&quot;); } } class ClildThread implements Runnable { @Override public void run() { while (true) { System.out.println(&quot;I’m child thread..&quot;); try { TimeUnit.MILLISECONDS.sleep(100); //Thread.sleep(100); } catch (InterruptedException e) { e.printStackTrace(); } } } }]]></content>
+    <content type="text"><![CDATA[守护线程Demo在Java中有两种线程：一种是普通线程，另一种是守护线程 守护线程：顾名思义就是守护的线程，它是为非守护线程服务的线程。 JVM虚拟机正常退出的时机就是系统中不存在非守护线程的时候，也就是说系统中不存在普通线程时虚拟机退出而不管守护线程是否还在运行 生活场景举例：普通线程相当于是主人，守护线程就是保姆，保姆是为了主人服务的。当主人都挂了，那么保姆可以存在也可以不存在 来一道面试题：一个主线程，三个子线程，9个守护线程，他们停止的顺序时什么？答：我们理解了上面讲的虚拟机退出时机再结合生活场景的例子，很容易就能搞明白这个问题！主线程相当于家庭、子线程相当于主人、守护线程相当于保姆或者是奴才，那么当我们的主人挂了，保姆可能还要继续打扫房子，但是房子也坏了消失了，那么保姆或奴才也就没必要存在了。所以说守护线程是最后才会停止的。那么主线程和子线程是谁先停止呢？这个其实很简单，我们想想，在一个main方法中启动一个线程打印一条语句，那么只有当这个线程停止之后，控制台的那个红色框才会置灰，也就是说main线程才会死亡。那么这个问题的答案就是：子、主、守护 手动敲个主线程和守护线程代码:1234567891011121314151617public class DaemonThreadDemo &#123; public static void main(String[] args) throws InterruptedException &#123; Thread mainThread = new Thread(new Runnable() &#123; @Override public void run() &#123; Thread childThread = new Thread(new ClildThread()); childThread.setDaemon(true); childThread.start(); System.out.println("I’m main thread…"); &#125; &#125;); mainThread.start(); Thread.sleep(1000); System.out.println(Thread.currentThread().getName() + "主线程结束"); &#125;&#125; 1234567891011121314class ClildThread implements Runnable &#123; @Override public void run() &#123; while (true) &#123; System.out.println("I’m child thread.."); try &#123; TimeUnit.MILLISECONDS.sleep(100); //Thread.sleep(100); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>多线程与并发</category>
+      </categories>
+      <tags>
+        <tag>多线程</tag>
+        <tag>守护线程</tag>
+        <tag>并发</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Nginx配置详解]]></title>

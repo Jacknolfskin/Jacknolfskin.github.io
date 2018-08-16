@@ -2835,6 +2835,7 @@ img:hover {
   background: #87daff;
 }
 .page-post-detail .comments {
+  background: #fff;
   overflow: hidden;
 }
 @media (max-width: 767px) {
