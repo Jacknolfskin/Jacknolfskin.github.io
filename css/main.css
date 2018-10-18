@@ -2051,7 +2051,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #baffff;
+  background: #58ff2a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2835,6 +2835,7 @@ img:hover {
   background: #87daff;
 }
 .page-post-detail .comments {
+  background: #fff
   overflow: hidden;
 }
 @media (max-width: 767px) {
