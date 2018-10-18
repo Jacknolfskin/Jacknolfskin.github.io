@@ -1,1 +1,1 @@
-https://www.jacknolfskin.top/技术总结/Spring中BeanFactory和ApplicationContext的区别.html
+https://www.jacknolfskin.top/随记/博客迁移公告.html

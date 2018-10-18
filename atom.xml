@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jacknolfskin.top/"/>
-  <updated>2018-07-10T05:51:01.000Z</updated>
+  <updated>2018-10-18T13:32:23.480Z</updated>
   <id>https://www.jacknolfskin.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客迁址公告</title>
+    <link href="https://www.jacknolfskin.top/%E9%9A%8F%E8%AE%B0/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%85%AC%E5%91%8A.html"/>
+    <id>https://www.jacknolfskin.top/随记/博客迁移公告.html</id>
+    <published>2018-10-18T12:54:43.177Z</published>
+    <updated>2018-10-18T13:32:23.480Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="公告"><a href="#公告" class="headerlink" title="公告"></a>公告</h2><p>  为方便博客内容的管理，今后本人的博客内容优先在简书网站<a href="https://www.jianshu.com/users/543bda7a326b/timeline" target="_blank" rel="noopener">Jacknolfskin</a>更新，该博客不作主要维护，但会留作简书博客备份，因此不会第一时间更新内容，多谢大家一直的关注和支持，欢迎移步做客！<br>  <img src="https://upload-images.jianshu.io/upload_images/11222983-419ae55b11dd2594.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="28731-106.jpg"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;公告&quot;&gt;&lt;a href=&quot;#公告&quot; class=&quot;headerlink&quot; title=&quot;公告&quot;&gt;&lt;/a&gt;公告&lt;/h2&gt;&lt;p&gt;  为方便博客内容的管理，今后本人的博客内容优先在简书网站&lt;a href=&quot;https://www.jianshu.com/users/54
+      
+    
+    </summary>
+    
+      <category term="随记" scheme="https://www.jacknolfskin.top/categories/%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+      <category term="博客" scheme="https://www.jacknolfskin.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="迁移" scheme="https://www.jacknolfskin.top/tags/%E8%BF%81%E7%A7%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>BeanFactory和ApplicationContext的区别</title>
@@ -182,7 +209,7 @@
     <link href="https://www.jacknolfskin.top/%E9%9A%8F%E8%AE%B0/%E5%BC%80%E7%AF%87.html"/>
     <id>https://www.jacknolfskin.top/随记/开篇.html</id>
     <published>2018-07-01T06:18:05.272Z</published>
-    <updated>2018-07-05T07:35:57.000Z</updated>
+    <updated>2018-10-18T12:55:57.284Z</updated>
     
     <content type="html"><![CDATA[<h3 id="第一次搭建个人博客小记"><a href="#第一次搭建个人博客小记" class="headerlink" title="第一次搭建个人博客小记"></a>第一次搭建个人博客小记</h3><h3 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h3><p>  积攒了很多优秀博客论文和自己关于技术的想法和实现，却没有一个好的平台去记录和呈现，偶然遇见<strong>GitHubPages</strong>和<strong>Hexo</strong>,正合心意，利用业余时间利用它们搭建了该博客平台，也希望从此认识更多热爱技术的人并与他们分享和讨论关于技术的问题和思考，一起学习与进步。</p><a id="more"></a><h3 id="心情"><a href="#心情" class="headerlink" title="心情"></a>心情</h3><p>昨晚酒喝的有点多，导致今天有些恍惚，幸好年前的工作事项的实现任务也都已进入尾声，让我得以有空在这写下这篇博客，今天给自己的主要任务就是完成该博客的搭建工作，现已部署上线，心情自然也是非常开心。今天就写到这吧，得去继续完善开发框架了</p>]]></content>
     
