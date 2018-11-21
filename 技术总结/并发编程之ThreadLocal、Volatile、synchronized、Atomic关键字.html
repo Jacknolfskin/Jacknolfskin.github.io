@@ -106,12 +106,12 @@
 <meta property="og:site_name" content="Jacknolfskin">
 <meta property="og:description" content="前言工作中用到ThreadLocal、Volatile、Synchronized、Atomic这四个关键字，是时候对它们总结一波了。 共享对象使用Java编写线程安全的程序关键在于正确的使用共享对象，以及安全的对其进行访问管理。Java的内置锁可以保障线程安全，对于其他的应用来说并发的安全性是使用内置锁保障了线程变量使用的边界。谈到线程的边界问题，随之而来的是Java内存模型另外的一个重要的含义，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ouao27g2f.bkt.clouddn.com/18-3-13/71027407.jpg">
-<meta property="og:updated_time" content="2018-03-20T07:58:17.000Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11222983-6f9fbe604481bbfd.jpg">
+<meta property="og:updated_time" content="2018-11-21T14:09:09.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="并发编程之ThreadLocal、Volatile、Synchronized、Atomic关键字">
 <meta name="twitter:description" content="前言工作中用到ThreadLocal、Volatile、Synchronized、Atomic这四个关键字，是时候对它们总结一波了。 共享对象使用Java编写线程安全的程序关键在于正确的使用共享对象，以及安全的对其进行访问管理。Java的内置锁可以保障线程安全，对于其他的应用来说并发的安全性是使用内置锁保障了线程变量使用的边界。谈到线程的边界问题，随之而来的是Java内存模型另外的一个重要的含义，">
-<meta name="twitter:image" content="http://ouao27g2f.bkt.clouddn.com/18-3-13/71027407.jpg">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11222983-6f9fbe604481bbfd.jpg">
 
 
 
@@ -379,8 +379,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-20T15:58:17+08:00">
-                2018-03-20
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T22:09:09+08:00">
+                2018-11-21
               </time>
             
           </span>
@@ -525,7 +525,7 @@
 </blockquote>
 <p>对于get方法，在ThreadLocal没有set值得情况下，默认返回null，所有如果要有一个初始值我们可以重写initialValue()方法，在没有set值得情况下调用get则返回初始值。</p>
 <h4 id="内部实现-3"><a href="#内部实现-3" class="headerlink" title="内部实现"></a>内部实现</h4><p>ThreadLocal内部有一个静态类ThreadLocalMap，使用到ThreadLocal的线程会与ThreadLocalMap绑定，维护着这个Map对象，而这个ThreadLocalMap的作用是映射当前ThreadLocal对应的值，它key为当前ThreadLocal的弱引用：WeakReference</p>
-<h4 id="内存泄露问题"><a href="#内存泄露问题" class="headerlink" title="内存泄露问题"></a>内存泄露问题</h4><p>对于ThreadLocal，一直涉及到内存的泄露问题，即当该线程不需要再操作某个ThreadLocal内的值时，应该手动的remove掉，为什么呢？我们来看看ThreadLocal与Thread的联系图：<br>此图来自网络：<br><img src="http://ouao27g2f.bkt.clouddn.com/18-3-13/71027407.jpg" alt=""></p>
+<h4 id="内存泄露问题"><a href="#内存泄露问题" class="headerlink" title="内存泄露问题"></a>内存泄露问题</h4><p>对于ThreadLocal，一直涉及到内存的泄露问题，即当该线程不需要再操作某个ThreadLocal内的值时，应该手动的remove掉，为什么呢？我们来看看ThreadLocal与Thread的联系图：<br>此图来自网络：<br><img src="https://upload-images.jianshu.io/upload_images/11222983-6f9fbe604481bbfd.jpg" alt=""></p>
 <p>其中虚线表示弱引用，从该图可以看出，一个Thread维持着一个ThreadLocalMap对象，而该Map对象的key又由提供该value的ThreadLocal对象弱引用提供，所以这就有这种情况：<br>如果ThreadLocal不设为static的，由于Thread的生命周期不可预知，这就导致了当系统gc时将会回收它，而ThreadLocal对象被回收了，此时它对应key必定为null，这就导致了该key对应得value拿不出来了，而value之前被Thread所引用，所以就存在key为null、value存在强引用导致这个Entry回收不了，从而导致内存泄露。</p>
 <p>所以避免内存泄露的方法，是对于ThreadLocal要设为static静态的，<br>这样的话ThreadLocal的生命周期就更长，由于一直存在ThreadLocal的强引用，所以ThreadLocal也就不会被回收，也就能保证任何时候都能根据ThreadLocal的弱引用访问到Entry的value值，然后remove它，防止内存泄露。除了这个，还必须在线程不使用它的值是手动remove掉该ThreadLocal的值，这样Entry就能够在系统gc的时候正常回收，而关于ThreadLocalMap的回收，会在当前Thread销毁之后进行回收。</p>
 <p>但需要注意的是，虽然ThreadLocal和Synchonized都用于解决多线程并发访问，ThreadLocal与synchronized还是有本质的区别。synchronized是利用锁的机制，使变量或代码块在某一时该只能被一个线程访问。而ThreadLocal为每一个线程都提供了变量的副本，使得每个线程在某一时间访问到的并不是同一个对象，这样就隔离了多个线程对数据的数据共享。而Synchronized却正好相反，它用于在多个线程间通信时能够获得数据共享。即Synchronized用于线程间的数据共享，而ThreadLocal则用于线程间的数据隔离。所以ThreadLocal并不能代替synchronized，Synchronized的功能范围更广(同步机制)。</p>
