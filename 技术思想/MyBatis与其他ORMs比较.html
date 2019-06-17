@@ -106,12 +106,12 @@
 <meta property="og:site_name" content="Jacknolfskin">
 <meta property="og:description" content="比较对象关系映射（ORM）框架允许我们从面向对象的语言访问关系数据库。多年来，我已经使用了几个用于Java的Hibernate / JPA，用于JavaScript的Bookshelf.js和Sequelize，仅举几例。我从来没有完全满意这些解决方案，因为这样或那样，他们不符合我的思维方式。最近，我尝试了MyBatis，呼吸新鲜空气！让我解释一下为什么。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/11222983-9775700bfa795911..jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-11-21T13:58:27.092Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/e669e956ly1g44hab2prej20yg0jdwhc.jpg">
+<meta property="og:updated_time" content="2019-06-17T13:34:50.504Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MyBatis与其他ORMs比较">
 <meta name="twitter:description" content="比较对象关系映射（ORM）框架允许我们从面向对象的语言访问关系数据库。多年来，我已经使用了几个用于Java的Hibernate / JPA，用于JavaScript的Bookshelf.js和Sequelize，仅举几例。我从来没有完全满意这些解决方案，因为这样或那样，他们不符合我的思维方式。最近，我尝试了MyBatis，呼吸新鲜空气！让我解释一下为什么。">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/11222983-9775700bfa795911..jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/e669e956ly1g44hab2prej20yg0jdwhc.jpg">
 
 
 
@@ -379,8 +379,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-21T21:58:27+08:00">
-                2018-11-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-17T21:34:50+08:00">
+                2019-06-17
               </time>
             
           </span>
@@ -487,7 +487,7 @@
       
 
       
-        <h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>对象关系映射（<strong>ORM</strong>）框架允许我们从面向对象的语言访问关系数据库。多年来，我已经使用了几个用于Java的<strong>Hibernate / JPA</strong>，用于<strong>JavaScript</strong>的<strong>Bookshelf.js</strong>和<strong>Sequelize</strong>，仅举几例。我从来没有完全满意这些解决方案，因为这样或那样，他们不符合我的思维方式。最近，我尝试了<strong>MyBatis</strong>，呼吸新鲜空气！让我解释一下为什么。<br><img src="http://upload-images.jianshu.io/upload_images/11222983-9775700bfa795911..jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+        <h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>对象关系映射（<strong>ORM</strong>）框架允许我们从面向对象的语言访问关系数据库。多年来，我已经使用了几个用于Java的<strong>Hibernate / JPA</strong>，用于<strong>JavaScript</strong>的<strong>Bookshelf.js</strong>和<strong>Sequelize</strong>，仅举几例。我从来没有完全满意这些解决方案，因为这样或那样，他们不符合我的思维方式。最近，我尝试了<strong>MyBatis</strong>，呼吸新鲜空气！让我解释一下为什么。<br><img src="https://ws1.sinaimg.cn/large/e669e956ly1g44hab2prej20yg0jdwhc.jpg" alt=""></p>
 <a id="more"></a>
 <h2 id="域实体应该没有持久性问题"><a href="#域实体应该没有持久性问题" class="headerlink" title="域实体应该没有持久性问题"></a>域实体应该没有持久性问题</h2><p>如果您遵循领域驱动设计，您可能会认同领域实体应该独立的想法。你不应该拖着一个持久性框架与他们。领域实体形成了六角形体系结构的内核，它只关注业务逻辑。你应该能够以任何你想要的方式站起来这个核心 - 通过构建新的对象或从数据库中检索它们，核心本身不应该在意。许多<strong>ORM</strong>污染这个核心与持久性的担忧，我不喜欢这一点。例如，<strong>Bookshelf</strong>强迫你使用Model对象定义实体，<strong>Sequelize</strong>使用<strong>sequelize.define（）</strong>。这会在实体内创建“隐藏的”属性和方法，教导他们坚持自己。我宁愿拥有专注于业务逻辑的纯Java / JavaScript对象，然后教导持久性框架坚持它们。</p>
 <p>那么，这正是<strong>MyBatis</strong>所做的。实体是<strong>POJO</strong>，对持久性一无所知（参见这里）。相反，你教<strong>MyBatis</strong>如何保存和检索这些实体使用<strong>SQL</strong>语句和结果图（见这里）。对于琐碎的对象，你甚至不需要定义结果地图，<strong>MyBatis</strong>自动计算出来。</p>
